@@ -47,9 +47,9 @@ static int	philo_life(t_philo *life)
 
 	local = 0;
 	if (life->id % 2 == 0)
-		locks_the_forks(life);
-	else
 		locks_the_forks2(life);
+	else
+		locks_the_forks(life);
 	if (lock_the_death(life, local))
 		return (unlocks_the_forks(life), 1);
 	eating(life);
